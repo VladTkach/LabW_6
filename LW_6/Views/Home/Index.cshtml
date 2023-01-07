@@ -1,0 +1,93 @@
+﻿@model LW_6.Models.BarModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="main">
+    <aside class="left__aside">
+        <h2 class="aside__title">Left side BAR</h2>
+        <ul class="list">
+            <li class="list__item">1 comment</li>
+            <li class="list__item">2 comment</li>
+            <li class="list__item">3 comment</li>
+            <li class="list__item">4 comment</li>
+            <li class="list__item">5 comment</li>
+            <li class="list__item">6 comment</li>
+
+        </ul>
+    </aside>
+
+    <div class="content">
+        <div class="main__title">
+            Information
+        </div>
+
+        <div class="main__text">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora consequuntur mollitia cupiditate
+                totam exercitationem commodi inventore delectus sint repellendus odio aut, quae sunt porro
+                reprehenderit, qui veritatis vel quas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora consequuntur mollitia cupiditate
+                totam exercitationem commodi inventore delectus sint repellendus odio aut, quae sunt porro
+                reprehenderit, qui veritatis vel quas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora consequuntur mollitia cupiditate
+                totam exercitationem commodi inventore delectus sint repellendus odio aut, quae sunt porro
+                reprehenderit, qui veritatis vel quas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora consequuntur mollitia cupiditate
+                totam exercitationem commodi inventore delectus sint repellendus odio aut, quae sunt porro
+                reprehenderit, qui veritatis vel quas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora consequuntur mollitia cupiditate
+                totam exercitationem commodi inventore delectus sint repellendus odio aut, quae sunt porro
+                reprehenderit, qui veritatis vel quas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora consequuntur mollitia cupiditate
+                totam exercitationem commodi inventore delectus sint repellendus odio aut, quae sunt porro
+                reprehenderit, qui veritatis vel quas.
+            </p>
+
+            <form action="/home/index" method="post">
+                <h2 class="create__title">Create Notification Bar</h2>
+                <div class="create__object">
+                    <div class="create__text">
+                        <textarea class="textarea" placeholder="Some text" asp-for="Text"></textarea>
+                    </div>
+                    <div class="submit">
+                        <button type="submit" class="submit__btn">submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <aside class="right__aside">
+        <div class="right__aside__content">
+            <h2 class="aside__title">Right side BAR</h2>
+            <div class="right__aside__images">
+                <!--                <img class="right__aside__item" src="assets/images/1.jfif" alt="" usemap="#testmap">-->
+                <img class="right__aside__item" src="assets/images/1.jfif" alt="" usemap="#testmap">
+                <map name="testmap">
+                    <area shape="circle" coords="0, 0, 1000, 1000" href="page1.html" alt="page 1">
+                </map>
+                <!--                    <img class="right__aside__item" src="assets/images/2.jfif" alt="">-->
+                <!--                    <img class="right__aside__item" src="assets/images/3.jfif" alt="">-->
+                <!--                    <img class="right__aside__item" src="assets/images/3.jfif" alt="">-->
+            </div>
+        </div>
+
+        <div class="right__aside__info">
+            some info about Bar
+        </div>
+    </aside>
+</div>
+
+<script src="~/js/script_create.js" asp-append-version="true"></script>

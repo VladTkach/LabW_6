@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - LW_6</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/LW_6.styles.css" asp-append-version="true"/>
+</head>
+<body>
+<div id="content"></div>
+<header class="header">
+    <h1 class="header__title">Header logo</h1>
+    <div class="menu__icon">
+        <span class="menu__icon__item"></span>
+    </div>
+
+    <nav class="nav">
+        <a asp-action="Index" class="nav__link">HOME</a>
+        <a asp-action="Page1" class="nav__link">Page_1</a>
+        <a asp-page="/Index" class="nav__link">Page_2</a>
+        <a asp-page="/Index" class="nav__link">Page_3</a>
+        <a asp-page="/Index" class="nav__link">Page_4</a>
+    </nav>
+</header>
+<main role="main" class="main">
+    @RenderBody()
+</main>
+
+<footer class="footer">
+    <div class="footer__content">
+        some content
+    </div>
+    <h2 class="footer__title">Footer</h2>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

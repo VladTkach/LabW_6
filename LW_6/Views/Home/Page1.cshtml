@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "page 1";
+}
+
+<div class="main">
+    <aside class="left__aside">
+        <h2 class="aside__title">Left side BAR</h2>
+    </aside>
+
+
+    <div class="content">
+        <div class="main__title">
+            Information
+        </div>
+
+        <div class="main__text large">
+            1
+        </div>
+
+        <div class="container">
+            @if (ViewBag.bars != null && ViewBag.bars.Count >= 1)
+            {
+                <table class="table table-dark">
+                    <thread>
+                        <tr>
+                            <th scope="col">Text</th>
+                        </tr>
+                    </thread>
+
+                    <tbody>
+                    @foreach (var bar in ViewBag.bars)
+                    {
+                        <tr>
+                            <td>@bar</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+    <aside class="right__aside">
+        <div class="right__aside__content">
+            <h2 class="aside__title">Right side BAR</h2>
+            <div class="right__aside__images">
+            </div>
+        </div>
+
+        <div class="right__aside__info">
+            some info about Bar
+        </div>
+    </aside>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script >
+alert("work")
+    var myList = @Json.Serialize(@ViewBag.bars);
+    
+    $(document).on('click', '.notify', function () {
+        $(this).slideUp().empty();
+    });
+   
+   $(function(){
+       for (let i = 0; i < myList.length; i++){
+           notify(myList[i]);
+       }
+       window.scrollTo(0, 0);
+   });
+   
+   function notify(msg) {
+       $("<div/>").prependTo('body').addClass('notify').html(msg).slideDown();
+   }
+     
+    
+</script>
